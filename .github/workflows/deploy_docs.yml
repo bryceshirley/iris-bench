@@ -6,11 +6,9 @@ on:
             - main
     workflow_dispatch:
     schedule:
-         - cron: '42 18 * * *'  # Runs every day at 18:41 UTC
-
+        - cron: '0 0 * * *'  # Runs every day at midnight UTC
 permissions:
     contents: write
-
 jobs:
     deploy:
         runs-on: ubuntu-latest
